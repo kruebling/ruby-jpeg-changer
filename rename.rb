@@ -6,7 +6,7 @@ pictures.each do |picture|
   answer = gets.chomp.to_i
   if answer == 1
     puts "So you want to rename it. Good what you want to rename it"
-    answer = gets.chomp
+    answer = gets.chomp + ".jpeg"
     File.rename(picture, File.join(Dir.pwd, answer))
     puts "The picture now it is #{answer}"
   elsif answer == 2
